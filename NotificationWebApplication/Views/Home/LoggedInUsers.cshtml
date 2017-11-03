@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "LoggedInUsers";
+}
+
+<div class="row">
+    @*<div class="col-md-offset-2">
+            <h2>Sign In</h2>
+        </div>*@
+    <br />
+    <br />
+    
+        <div>
+            <label class="col-md-3">Enter User Name</label>
+
+            <input type="text" name="name" id="name" class="form-control" />
+        </div>
+
+            <div class="col-md-offset-2 col-md-2" style="text-align:center; margin-top:10px">
+                <input type="button" class="form-control" onclick="BroadCastNewUser()" value="Enter"/>
+            </div>
+
+</div>
+
+
+<h2>Logged In Users List: </h2>
+
+<ul id="usersList">
+
+</ul>
+
+@section scripts { 
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+
+<script src="~/signalr/hubs"></script>
+
+<script>
+    
+    var notfHub = $.connection.notificationHub;
+    
+    var lastDateTime = sessionStorage.getItem("lastDateTime");
+
+    function CalcDifference(dateTimeNow, lastDateTime){
+        var startHour = lastDateTime.getHours();
+        var startMinute = lastDateTime.getMinutes();
+        var startSecond = lastDateTime.getSeconds();
+
+        var endHour = dateTimeNow.getHours();
+        var endMinute = dateTimeNow.getMinutes();
+        var endSecond = dateTimeNow.getSeconds();
+
+        //Create date object and set the time to that
+        var startTimeObject = new Date();
+        startTimeObject.setHours(startHour, startMinute, startSecond);
+
+        //Create date object and set the time to that
+        var endTimeObject = new Date(startTimeObject);
+        endTimeObject.setHours(endHour, endMinute, endSecond);
+
+        
+    }
+
+    function BroadCastNewUser() {
+        notfHub.server.receiveNewAndBroadCastAllUsers($('#name').val());
+    }
+
+    function UpdateUserList(newUserList) {
+        $("#usersList").empty();
+        $.each(newUserList, function (index, object) {
+            $("#usersList").append('<li>' + object.Name + '</li>');
+        });
+    }
+
+    $(function () {
+        debugger;
+        
+
+        notfHub.client.broadcastAllUsers = function (newUserList) {
+            UpdateUserList(newUserList);
+        }
+
+        $.connection.hub.start().done(function () {
+            BroadCastNewUser();
+        });
+    });
+</script>
+}
