@@ -39,28 +39,6 @@
 <script>
     
     var notfHub = $.connection.notificationHub;
-    
-    var lastDateTime = sessionStorage.getItem("lastDateTime");
-
-    function CalcDifference(dateTimeNow, lastDateTime){
-        var startHour = lastDateTime.getHours();
-        var startMinute = lastDateTime.getMinutes();
-        var startSecond = lastDateTime.getSeconds();
-
-        var endHour = dateTimeNow.getHours();
-        var endMinute = dateTimeNow.getMinutes();
-        var endSecond = dateTimeNow.getSeconds();
-
-        //Create date object and set the time to that
-        var startTimeObject = new Date();
-        startTimeObject.setHours(startHour, startMinute, startSecond);
-
-        //Create date object and set the time to that
-        var endTimeObject = new Date(startTimeObject);
-        endTimeObject.setHours(endHour, endMinute, endSecond);
-
-        
-    }
 
     function BroadCastNewUser() {
         notfHub.server.receiveNewAndBroadCastAllUsers($('#name').val());
@@ -74,8 +52,6 @@
     }
 
     $(function () {
-        debugger;
-        
 
         notfHub.client.broadcastAllUsers = function (newUserList) {
             UpdateUserList(newUserList);

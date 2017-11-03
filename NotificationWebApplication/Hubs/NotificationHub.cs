@@ -11,6 +11,7 @@ namespace NotificationWebApplication.Hubs
     public class NotificationHub : Hub
     {
         private static List<UserConnectionModel> _userList = new List<UserConnectionModel>();
+        private static DateTime dateTime;
 
         public void ReceiveNewAndBroadCastAllUsers(string newUser)
         {
@@ -22,6 +23,12 @@ namespace NotificationWebApplication.Hubs
                 });
 
             Clients.All.BroadcastAllUsers(_userList);
+        }
+
+        public override Task OnConnected()
+        {
+            dateTime = DateTime.Now;
+            return base.OnConnected();
         }
 
         public override Task OnDisconnected(bool stopCalled)
