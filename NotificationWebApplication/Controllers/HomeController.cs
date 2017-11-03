@@ -27,7 +27,6 @@ namespace NotificationWebApplication.Controllers
             return View();
         }
 
-        //Well done subru
         public ActionResult LoggedInUsers()
         {
             return View();
