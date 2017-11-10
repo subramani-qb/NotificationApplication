@@ -11,7 +11,7 @@ namespace NotificationWebApplication
         {
             ConfigureAuth(app);
 
-            string connectionString = "data source = DESKTOP-6DNTMS0\\SQLSERVER2012; initial catalog=NotificationDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+            string connectionString = "data source=DESKTOP-6DNTMS0\\SQLSERVER2012; initial catalog=NotificationDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
             GlobalHost.DependencyResolver.UseSqlServer(connectionString);
 
             app.MapSignalR();
