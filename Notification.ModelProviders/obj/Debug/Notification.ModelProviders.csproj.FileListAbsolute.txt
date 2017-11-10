@@ -1,0 +1,1 @@
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\obj\Debug\Notification.ModelProviders.csprojResolveAssemblyReference.cache
