@@ -11,3 +11,4 @@ C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignal
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Entity\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Entity\obj\Debug\Notification.Entity.dll
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Entity\obj\Debug\Notification.Entity.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Entity\obj\Debug\Notification.Entity.csprojResolveAssemblyReference.cache

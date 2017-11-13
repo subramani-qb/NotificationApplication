@@ -171,3 +171,10 @@ C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignal
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\obj\Debug\NotificationWebApplication.dll
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\obj\Debug\NotificationWebApplication.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Notification.ModelProviders.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Notification.Models.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Notification.Entity.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Notification.ModelProviders.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Notification.Models.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\bin\Notification.Entity.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\NotificationWebApplication\obj\Debug\NotificationWebApplication.csprojResolveAssemblyReference.cache

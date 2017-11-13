@@ -21,7 +21,7 @@ namespace Notification.ModelProviders
             {
                 IEnumerable<UserTimeDetails> userTimeDetailsList = context.UserTimeDetails;
 
-                return userTimeDetailsList.Select(x => this.PopulateModel(x));
+                return userTimeDetailsList.Select(x => this.PopulateModel(x)).ToList();
             }
             
         }
@@ -32,7 +32,8 @@ namespace Notification.ModelProviders
             {
                 LastActiveTime = userTimeDetails.LastActiveTime,
                 Name = userTimeDetails.Name,
-                UserId = userTimeDetails.UserId
+                UserId = userTimeDetails.UserId,
+                LoggedInTime = userTimeDetails.LoggedInTime
             };
         }
 
@@ -40,23 +41,30 @@ namespace Notification.ModelProviders
         {
             using(var context = new NotificationContext())
             {
-                UserTimeDetails userTimeDetails = new UserTimeDetails()
-                {
-                    Name = userTimeDetailsModel.Name,
-                    LastActiveTime = DateTime.Now,
-                    UserId = Guid.NewGuid()
-                };
+                UserTimeDetails userTimeDetails = context.UserTimeDetails.Where(x => x.UserId == userTimeDetailsModel.UserId).SingleOrDefault();
+                UserTimeDetails newUserTimeDetails = new UserTimeDetails();
 
-                context.UserTimeDetails.Add(userTimeDetails);
+                if (userTimeDetails == null)
+                    context.UserTimeDetails.Add(newUserTimeDetails);
+
+                this.UpdateEntity(userTimeDetails ?? newUserTimeDetails, userTimeDetailsModel);
                 context.SaveChanges();
             }
         }
 
-        public void UpdateExisting(UserTimeDetailsModel userTimeDetailsModel)
+        private void UpdateEntity(UserTimeDetails userTimeDetails, UserTimeDetailsModel userTimeDetailsModel)
+        {
+            userTimeDetails.UserId = userTimeDetailsModel.UserId;
+            userTimeDetails.Name = userTimeDetailsModel.Name;
+            userTimeDetails.LastActiveTime = userTimeDetailsModel.LastActiveTime.Year < DateTime.Now.Year ? DateTime.Now : userTimeDetailsModel.LastActiveTime;
+            userTimeDetails.LoggedInTime = userTimeDetailsModel.LoggedInTime.Year < DateTime.Now.Year ? DateTime.Now : userTimeDetailsModel.LoggedInTime;
+        }
+
+        public void UpdateExisting(Guid UserId)
         {
             using (var context = new NotificationContext())
             {
-                UserTimeDetails userTimeDetails = context.UserTimeDetails.Where(x => x.UserId == userTimeDetailsModel.UserId).SingleOrDefault();
+                UserTimeDetails userTimeDetails = context.UserTimeDetails.Where(x => x.UserId == UserId).SingleOrDefault();
 
                 if (userTimeDetails == null)
                     return;

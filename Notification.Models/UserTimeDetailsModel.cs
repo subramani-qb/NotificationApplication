@@ -13,5 +13,7 @@ namespace Notification.Models
         public string Name { get; set; }
         
         public DateTime LastActiveTime { get; set; }
+
+        public DateTime LoggedInTime { get; set; }
     }
 }

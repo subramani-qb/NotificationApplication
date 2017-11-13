@@ -20,5 +20,10 @@ namespace NotificationWebApplication
 
             GlobalFilters.Filters.Add(new UpdateTimeFilterAttribute());
         }
+
+        protected void Session_Start(Object sender, EventArgs e)
+        {
+            Session["LoggedInUserId"] = Guid.NewGuid();
+        }
     }
 }

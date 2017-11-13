@@ -1,1 +1,11 @@
 C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\obj\Debug\Notification.ModelProviders.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\Notification.ModelProviders.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\Notification.ModelProviders.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\EntityFramework.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\Notification.Entity.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\Notification.Models.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\Notification.Entity.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\Notification.Models.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\bin\Debug\EntityFramework.xml
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\obj\Debug\Notification.ModelProviders.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.ModelProviders\obj\Debug\Notification.ModelProviders.pdb
