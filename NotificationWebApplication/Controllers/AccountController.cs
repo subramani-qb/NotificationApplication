@@ -20,6 +20,7 @@ namespace NotificationWebApplication.Controllers
 
         public AccountController()
         {
+            //For cherry picking
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )

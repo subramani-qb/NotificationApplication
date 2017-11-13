@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotificationWebApplication.ActionFilters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,13 @@ namespace NotificationWebApplication
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            GlobalFilters.Filters.Add(new UpdateTimeFilterAttribute());
+        }
+
+        protected void Session_Start(Object sender, EventArgs e)
+        {
+            Session["LoggedInUserId"] = Guid.NewGuid();
         }
     }
 }

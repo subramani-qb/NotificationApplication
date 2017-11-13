@@ -1,0 +1,4 @@
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Models\bin\Debug\Notification.Models.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Models\bin\Debug\Notification.Models.pdb
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Models\obj\Debug\Notification.Models.dll
+C:\Users\user\Source\Repos\NotificationApplication\NotificationApplicationSignalR\Notification.Models\obj\Debug\Notification.Models.pdb
